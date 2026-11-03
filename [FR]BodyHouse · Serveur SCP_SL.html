@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>[FR]BodyHouse · Serveur SCP:SL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap">
+<style>
+:root{--bg:#f6f4ee;--surface:#ffffff;--band:#ece9df;--line:#d8d4c8;--text:#171715;--muted:#55584f;--accent:#c2480a;--on-accent:#ffffff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1110;--surface:#181b19;--band:#151816;--line:#2a2f2c;--text:#ece9e1;--muted:#b4b9b2;--accent:#ff7a1a;--on-accent:#0f1110;}}
+:root[data-theme="dark"]{--bg:#0f1110;--surface:#181b19;--band:#151816;--line:#2a2f2c;--text:#ece9e1;--muted:#b4b9b2;--accent:#ff7a1a;--on-accent:#0f1110;}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.55 'Barlow',system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0}
+.disp{font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;font-weight:700;text-transform:uppercase}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+.stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--accent) 0 16px,var(--bg) 16px 32px)}
+.nav{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--line)}
+.brand{font-size:26px;letter-spacing:.06em}
+.tabs{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center}
+.tabs a:not(.btn){color:var(--muted);font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.tabs a:not(.btn):hover{color:var(--text)}
+.tabs a[aria-current="page"]{color:var(--accent);border-bottom-color:var(--accent)}
+.btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:500;transition:transform .15s,opacity .15s}
+.btn:hover{opacity:.9;transform:translateY(-3px)}
+.btn-p{background:var(--accent);color:var(--on-accent)}
+.btn-g{border:1px solid var(--line)}
+.btn-s{padding:10px 18px}
+.btn-b{background:var(--on-accent);color:var(--accent)}
+.eyebrow{color:var(--accent);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:14px}
+.chip{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:14px;padding:6px 14px;transform:rotate(-2deg)}
+.muted{color:var(--muted)}
+.h1{font-size:clamp(44px,11vw,130px);line-height:.95;margin:16px 0 24px}
+.h1s{font-size:clamp(40px,7vw,64px);line-height:1;margin:12px 0 20px}
+.h2{font-size:44px;line-height:1.05}
+.lead{max-width:620px;font-size:20px}
+.row{display:flex;flex-wrap:wrap;gap:16px}
+.sec{padding:80px 0}
+.hero{padding:112px 0 96px}
+.band{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.top{background:var(--accent);color:var(--on-accent)}
+.top .in{display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center;justify-content:space-between;padding:40px 32px}
+.top .tx{flex:1 1 380px}
+.top p{margin:8px 0 0;font-size:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:20px}
+.grid2{grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:28px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-5px);border-color:var(--accent)}
+.card h3{font-size:20px;font-weight:500;margin:0 0 8px}
+.card p{margin:0}
+.steps{gap:32px}
+.num{font-size:84px;line-height:1;color:transparent;-webkit-text-stroke:2px var(--accent)}
+.marq-w{background:var(--accent);color:var(--on-accent);overflow:hidden;white-space:nowrap}
+.marq{display:flex;width:max-content;animation:scroll 30s linear infinite;padding:14px 0;font-size:28px;letter-spacing:.08em}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq{animation:none}}
+.rg{display:flex;flex-direction:column;gap:18px}
+.rg h3{font-size:30px;letter-spacing:.04em;font-weight:700;margin:0}
+.r{display:flex;gap:16px;align-items:baseline}
+.rn{flex:none;width:36px;font-size:26px;color:var(--accent)}
+.span{grid-column:1/-1}
+.call{margin-top:8px;background:var(--band);border-left:3px solid var(--accent);padding:16px 20px}
+.av{width:56px;height:56px;border-radius:50%;background:var(--band);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--accent)}
+.av-l{width:64px;height:64px;font-size:32px;flex:none}
+.role{color:var(--accent);font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:13px}
+.pc{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.view{display:none}.view.active{display:block}
+.foot{padding:40px 32px 56px;color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+<div class="stripe"></div>
+<header class="wrap"><div class="nav">
+<a class="brand disp" href="#accueil">[FR]BodyHouse</a>
+<nav class="tabs" aria-label="Pages">
+<a href="#accueil">Accueil</a>
+<a href="#regles">Règles</a>
+<a href="#contact">Contact staff</a>
+<a class="btn btn-p btn-s" href="https://discord.gg/Bju3EGnWRU" target="_blank" rel="noopener">Discord</a>
+</nav></div></header>
+
+<main>
+<section class="view" id="v-accueil">
+<div class="wrap hero">
+<span class="chip">SCP: Secret Laboratory · Serveur francophone</span>
+<h1 class="h1 disp">[FR]BodyHouse</h1>
+<p class="lead muted" style="margin:0 0 40px">Un serveur communautaire avec des plugins sur mesure, un statut en direct sur Discord et une équipe qui reste à l’écoute.</p>
+<div class="row"><a class="btn btn-p" href="https://discord.gg/Bju3EGnWRU" target="_blank" rel="noopener">Rejoindre le Discord</a><a class="btn btn-g" href="#rejoindre">Comment jouer</a></div>
+</div>
+<div class="marq-w" aria-hidden="true"><div class="marq disp"><span>SCP: Secret Laboratory&nbsp;&nbsp;/&nbsp;&nbsp;[FR]BodyHouse&nbsp;&nbsp;/&nbsp;&nbsp;Serveur francophone&nbsp;&nbsp;/&nbsp;&nbsp;EXILED&nbsp;&nbsp;/&nbsp;&nbsp;SCP: Secret Laboratory&nbsp;&nbsp;/&nbsp;&nbsp;[FR]BodyHouse&nbsp;&nbsp;/&nbsp;&nbsp;Serveur francophone&nbsp;&nbsp;/&nbsp;&nbsp;EXILED&nbsp;&nbsp;/&nbsp;&nbsp;SCP: Secret Laboratory&nbsp;&nbsp;/&nbsp;&nbsp;[FR]BodyHouse&nbsp;&nbsp;/&nbsp;&nbsp;Serveur francophone&nbsp;&nbsp;/&nbsp;&nbsp;EXILED&nbsp;&nbsp;/&nbsp;&nbsp;</span><span>SCP: Secret Laboratory&nbsp;&nbsp;/&nbsp;&nbsp;[FR]BodyHouse&nbsp;&nbsp;/&nbsp;&nbsp;Serveur francophone&nbsp;&nbsp;/&nbsp;&nbsp;EXILED&nbsp;&nbsp;/&nbsp;&nbsp;SCP: Secret Laboratory&nbsp;&nbsp;/&nbsp;&nbsp;[FR]BodyHouse&nbsp;&nbsp;/&nbsp;&nbsp;Serveur francophone&nbsp;&nbsp;/&nbsp;&nbsp;EXILED&nbsp;&nbsp;/&nbsp;&nbsp;SCP: Secret Laboratory&nbsp;&nbsp;/&nbsp;&nbsp;[FR]BodyHouse&nbsp;&nbsp;/&nbsp;&nbsp;Serveur francophone&nbsp;&nbsp;/&nbsp;&nbsp;EXILED&nbsp;&nbsp;/&nbsp;&nbsp;</span></div></div>
+<div class="band" id="steps"><div class="wrap sec">
+<h2 class="h2 disp" style="margin-bottom:40px">Nous rejoindre en 3 étapes</h2>
+<div class="grid steps">
+<div><div class="num disp">01</div><p class="muted" style="margin:8px 0 0">Lance SCP: Secret Laboratory et ouvre la liste des serveurs communautaires.</p></div>
+<div><div class="num disp">02</div><p class="muted" style="margin:8px 0 0">Cherche [FR]BodyHouse, ou entre l’adresse frbodyhouse.axenthost.me:41251 à la main.</p></div>
+<div><div class="num disp">03</div><p class="muted" style="margin:8px 0 0">Passe sur le Discord pour le règlement, les annonces et pour trouver des joueurs.</p></div>
+</div></div></div>
+<div class="wrap sec">
+<h2 class="h2 disp" style="margin-bottom:40px">Sur le serveur</h2>
+<div class="grid">
+<div class="card"><h3>Statut en direct</h3><p class="muted">Le bot du Discord affiche le nombre de joueurs et la durée de la manche en cours.</p></div>
+<div class="card"><h3>Plugins sur mesure</h3><p class="muted">Le serveur tourne sous EXILED, avec des plugins ajoutés au fil des idées de la communauté.</p></div>
+<div class="card"><h3>Équipe à l’écoute</h3><p class="muted">Un staff présent sur le Discord. <a href="#contact" style="color:var(--accent);font-weight:500">Découvrir le staff</a></p></div>
+</div></div>
+</section>
+
+<section class="view" id="v-regles">
+<div class="top"><div class="wrap in" style="padding-left:32px;padding-right:32px"><div class="tx"><h2 class="h2 disp">Avant de jouer</h2><p>Lis ces règles avant ta première partie. Un doute, un souci ? Le staff est là pour t’aider.</p></div><a class="btn btn-b" href="#contact">Contacter le staff</a></div></div>
+<div class="band"><div class="wrap sec">
+<div class="eyebrow">Règlement</div>
+<h1 class="h1s disp">Respectez les autres joueurs.</h1>
+<p class="lead muted" style="margin:0 0 48px">Tout le reste en découle. Voici les 14 règles, classées par thème : lis-les une fois et la partie se passera bien pour tout le monde.</p>
+<div class="grid grid2">
+<div class="card rg"><h3 class="disp">Fair-play</h3>
+<div class="r"><div class="rn disp">01</div><div><span style="font-weight:500">Cheat</span> <span class="muted">: strictement interdit.</span></div></div>
+<div class="r"><div class="rn disp">02</div><div><span style="font-weight:500">Contournement de sanction</span> <span class="muted">: interdit.</span></div></div>
+<div class="r"><div class="rn disp">03</div><div><span style="font-weight:500">Usebug</span> <span class="muted">: interdit.</span></div></div>
+<div class="r"><div class="rn disp">04</div><div><span style="font-weight:500">Fair-play</span> <span class="muted">: soyez un minimum fair-play.</span></div></div>
+<div class="r"><div class="rn disp">05</div><div><span style="font-weight:500">Spawnkill</span> <span class="muted">: interdit.</span></div></div>
+<div class="r"><div class="rn disp">06</div><div><span style="font-weight:500">Vol de stuff</span> <span class="muted">: notamment à SCP-914, c’est interdit.</span></div></div>
+</div>
+<div class="card rg"><h3 class="disp">Communication</h3>
+<div class="r"><div class="rn disp">07</div><div><span style="font-weight:500">Spam micro</span> <span class="muted">: interdit.</span></div></div>
+<div class="r"><div class="rn disp">08</div><div><span style="font-weight:500">Contenu sexuel</span> <span class="muted">: interdit.</span></div></div>
+<div class="r"><div class="rn disp">09</div><div><span style="font-weight:500">Harcèlement, doxxing, menaces</span> <span class="muted">: interdits.</span></div></div>
+<div class="r"><div class="rn disp">10</div><div><span style="font-weight:500">Soundboard</span> <span class="muted">: autorisé si raisonnable. Ne saturez pas l’intercom, par exemple.</span></div></div>
+</div>
+<div class="card rg span"><h3 class="disp">Factions</h3>
+<div class="r"><div class="rn disp">11</div><div><span style="font-weight:500">Alliances SCP et humains</span> <span class="muted">: strictement interdites.</span></div></div>
+<div class="r"><div class="rn disp">12</div><div><span style="font-weight:500">Humains</span> <span class="muted">: neutres avec les classes D et les scientifiques.</span></div></div>
+<div class="r"><div class="rn disp">13</div><div><span style="font-weight:500">Civils</span> <span class="muted">: ne les tuez pas, sauf s’ils vous attaquent, n’obéissent pas ou tentent de fuir.</span></div></div>
+<div class="r"><div class="rn disp">14</div><div><span style="font-weight:500">Chaos et NTF</span> <span class="muted">: alliances exceptionnelles autorisées, par exemple pour tuer un SCP.</span></div></div>
+<div class="call"><span style="font-weight:500">Cette alliance est temporaire.</span> <span class="muted">Une fois la menace détruite, vous reprenez votre adversité.</span></div>
+</div>
+</div>
+</div></div>
+</section>
+
+<section class="view" id="v-contact">
+<div class="top"><div class="wrap in" style="padding-left:32px;padding-right:32px"><div class="tx"><h2 class="h2 disp">Un doute, un problème ?</h2><p>Le staff est joignable sur le Discord, dans le salon #demande-ticket.</p></div><a class="btn btn-b" href="https://discord.gg/Bju3EGnWRU" target="_blank" rel="noopener">Ouvrir le Discord</a></div></div>
+<div class="wrap" style="padding-top:96px;padding-bottom:56px">
+<div class="eyebrow">Support</div>
+<h1 class="h1s disp">Contacter le staff</h1>
+<p class="lead muted" style="margin:0 0 36px">Un joueur à signaler, une sanction à contester, une question : tout passe par le Discord.</p>
+<a class="btn btn-p" href="https://discord.gg/Bju3EGnWRU" target="_blank" rel="noopener">Ouvrir le Discord</a>
+</div>
+<div class="wrap" style="padding-bottom:72px">
+<div class="grid">
+<div class="card"><h3>Signaler un joueur</h3><p class="muted">Donne son pseudo, l’heure approximative, ce qui s’est passé et une preuve si tu en as une (capture ou clip).</p></div>
+<div class="card"><h3>Contester une sanction</h3><p class="muted">Explique calmement la situation. Rappel : contourner une sanction est interdit.</p></div>
+<div class="card"><h3>Une autre question</h3><p class="muted">Pose-la sur le Discord : le staff ou la communauté te répondra.</p></div>
+</div>
+<div class="call" style="margin-top:32px"><span style="font-weight:500">Où écrire exactement ?</span> <span class="muted">Rends-toi dans le salon <span style="color:var(--accent);font-weight:500">#demande-ticket</span> du Discord pour ouvrir ta demande.</span></div>
+</div>
+<div class="wrap" style="padding-bottom:80px">
+<div class="eyebrow">Équipe</div>
+<h2 class="h2 disp" style="margin:12px 0 16px">Le staff et les partenaires</h2>
+<p class="lead muted" style="margin:0 0 32px">Les personnes qui font tourner le serveur et répondent à tes demandes, ainsi que nos partenaires.</p>
+<div class="grid">
+<div class="card rg" style="gap:12px"><div class="av disp">P</div><div class="role">Gérant du serveur</div><h3 class="disp">Paces_enzo</h3><p class="muted">Gère le serveur [FR]BodyHouse.</p></div>
+<div class="card rg" style="gap:12px"><div class="av disp">B</div><div class="role">Gérant du serveur</div><h3 class="disp">Bender</h3><p class="muted">Gère le serveur [FR]BodyHouse.</p></div>
+<div class="card rg" style="gap:12px"><div class="av disp">Z</div><div class="role">Partenaire Twitch</div><h3 class="disp">Zeta</h3><p class="muted">Streameur partenaire du serveur [FR]BodyHouse.</p><a class="btn btn-p" style="align-self:flex-start;padding:12px 24px;margin-top:4px" href="https://www.twitch.tv/lmkzeta" target="_blank" rel="noopener">Voir la chaîne</a></div>
+</div>
+</div>
+<div class="wrap" style="padding-bottom:80px">
+<h2 class="h2 disp" style="margin-bottom:12px">Devenir partenaire</h2>
+<p class="lead muted" style="margin:0 0 32px">Tu crées du contenu ou tu gères une communauté et tu veux collaborer avec [FR]BodyHouse ? Parles-en au staff sur le Discord.</p>
+<a class="btn btn-p" href="https://discord.gg/Bju3EGnWRU" target="_blank" rel="noopener">Écrire sur le Discord</a>
+</div>
+<div class="band"><div class="wrap" style="padding-top:72px;padding-bottom:72px">
+<h2 class="h2 disp" style="margin-bottom:12px">Pas encore lu le règlement ?</h2>
+<p class="lead muted" style="margin:0 0 32px">Beaucoup de questions trouvent leur réponse dans les règles.</p>
+<a class="btn btn-p" href="#regles">Lire le règlement</a>
+</div></div>
+</section>
+</main>
+
+<div class="stripe"></div>
+<footer class="wrap foot">Projet de fans, non affilié à Northwood Studios ni à la SCP Foundation.</footer>
+
+<script>
+(function(){
+  var views=['accueil','regles','contact'];
+  function route(){
+    var h=(location.hash||'').slice(1);
+    var view=h==='rejoindre'?'accueil':(views.indexOf(h)>-1?h:'accueil');
+    document.querySelectorAll('.view').forEach(function(v){v.classList.toggle('active',v.id==='v-'+view);});
+    document.querySelectorAll('.tabs a:not(.btn)').forEach(function(a){
+      if(a.getAttribute('href')==='#'+view){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}
+    });
+    if(h==='rejoindre'){document.getElementById('steps').scrollIntoView();}else{window.scrollTo(0,0);}
+  }
+  window.addEventListener('hashchange',route);
+  route();
+})();
+</script>
+</body>
+</html>
